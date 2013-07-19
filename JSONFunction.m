@@ -15,9 +15,9 @@
     NSData *requestBody = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
     if(error == nil)
     {
-		DLog(@"Serialization body: %@",dict);
+		NSLog(@"Serialization body: %@",dict);
     }else {
-        DLog(@"Serialization Eror: %@",error);
+        NSLog(@"Serialization Eror: %@",error);
     }
     return requestBody;
 }
@@ -27,9 +27,9 @@
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     if(error == nil)
     {
-		DLog(@"Serialization body: %@",jsonObject);
+		NSLog(@"Serialization body: %@",jsonObject);
     }else {
-        DLog(@"Serialization Eror: %@",error);
+        NSLog(@"Serialization Eror: %@",error);
     }
     return jsonObject;
 }
