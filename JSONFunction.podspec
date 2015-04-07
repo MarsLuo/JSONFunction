@@ -17,10 +17,10 @@ Pod::Spec.new do |s|
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/JSONFunction"
+  s.homepage         = "https://github.com/MarsLuo/JSONFunction"
   s.license          = 'MIT'
   s.author           = { "骆杨" => "lyyx_0@163.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/JSONFunction.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/MarsLuo/JSONFunction.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
