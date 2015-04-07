@@ -1,6 +1,6 @@
 # JSONFunction
 
-[![CI Status](http://img.shields.io/travis/骆杨/JSONFunction.svg?style=flat)](https://travis-ci.org/骆杨/JSONFunction)
+#[![CI Status](http://img.shields.io/travis/骆杨/JSONFunction.svg?style=flat)](https://travis-ci.org/骆杨/JSONFunction)
 [![Version](https://img.shields.io/cocoapods/v/JSONFunction.svg?style=flat)](http://cocoapods.org/pods/JSONFunction)
 [![License](https://img.shields.io/cocoapods/l/JSONFunction.svg?style=flat)](http://cocoapods.org/pods/JSONFunction)
 [![Platform](https://img.shields.io/cocoapods/p/JSONFunction.svg?style=flat)](http://cocoapods.org/pods/JSONFunction)
@@ -17,7 +17,7 @@ JSONFunction is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "JSONFunction"
+pod "JSONFunction", :git => 'https://github.com/MarsLuo/JSONFunction.git'
 ```
 
 ## Author
