@@ -1,21 +1,21 @@
 //
-//  JsonFunction.m
-//  
+//  NSString+JSON.m
+//  Cicada
 //
-//  Created by Mars Luo on 13-6-24.
-//  Copyright (c) 2013年 Mars Luo. All rights reserved.
+//  Created by 骆杨 on 10/29/14.
+//  Copyright (c) 2014 thinkjoy. All rights reserved.
 //
 
-#import "JSONFunction.h"
+#import "NSString+JSON.h"
 
-@implementation JSONFunction
+@implementation NSString (JSON)
 
 + (NSData *) jsonDateWithNSDictionary:(NSDictionary *)dict{
     NSError *error = nil;
-    NSData *requestBody = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    NSData *requestBody = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
     if(error == nil)
     {
-		NSLog(@"Serialization body: %@",dict);
+//        NSLog(@"Serialization body: %@",dict);
     }else {
         NSLog(@"Serialization Eror: %@",error);
     }
@@ -24,10 +24,10 @@
 
 + (id) jsonObjectWithData:(NSData *) data{
     NSError *error = nil;
-    id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves|NSJSONReadingAllowFragments error:&error];
     if(error == nil)
     {
-		NSLog(@"Serialization body: %@",jsonObject);
+//        NSLog(@"Serialization body: %@",jsonObject);
     }else {
         NSLog(@"Serialization Eror: %@",error);
     }
@@ -35,14 +35,14 @@
 }
 
 + (NSString *) jsonStringWithNSDictionary:(NSDictionary *) dict{
-    NSData *jsonData = [JSONFunction jsonDateWithNSDictionary:dict];
+    NSData *jsonData = [NSString jsonDateWithNSDictionary:dict];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     return jsonString;
 }
 
 + (id) jsonObjectWithNSString:(NSString *) jsonString{
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    id jsonObject = [JSONFunction jsonObjectWithData:jsonData];
+    id jsonObject = [NSString jsonObjectWithData:jsonData];
     return jsonObject;
 }
 

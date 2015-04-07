@@ -1,20 +1,21 @@
 //
-//  JsonFunction.h
-// 
+//  NSString+JSON.h
+//  Cicada
 //
-//  Created by Mars Luo on 13-6-24.
-//  Copyright (c) 2013年 Mars Luo. All rights reserved.
+//  Created by 骆杨 on 10/29/14.
+//  Copyright (c) 2014 thinkjoy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface JSONFunction : NSObject
+@interface NSString (JSON)
 
-// Utillity function
 + (NSData *) jsonDateWithNSDictionary:(NSDictionary *)dict;
+
 + (id) jsonObjectWithData:(NSData *) data;
 
 + (NSString *) jsonStringWithNSDictionary:(NSDictionary *) dict;
+
 + (id) jsonObjectWithNSString:(NSString *) jsonString;
 
 @end
