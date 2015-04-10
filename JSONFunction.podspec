@@ -10,12 +10,9 @@
 Pod::Spec.new do |s|
   s.name             = "JSONFunction"
   s.version          = "0.1.0"
-  s.summary          = "A short description of JSONFunction."
+  s.summary          = "packaging NSJSONSerialization tool"
   s.description      = <<-DESC
-                       An optional longer description of JSONFunction
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       packaging NSJSONSerialization tool.
                        DESC
   s.homepage         = "https://github.com/MarsLuo/JSONFunction"
   s.license          = 'MIT'
