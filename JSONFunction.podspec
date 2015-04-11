@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "JSONFunction"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "packaging NSJSONSerialization tool"
   s.description      = <<-DESC
                        packaging NSJSONSerialization tool.
@@ -23,4 +23,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
+  s.public_header_files = 'Pod/Classes/**/*.h'
 end
