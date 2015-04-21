@@ -10,12 +10,12 @@
 
 @implementation NSString (JSON)
 
-+ (NSData *) jsonDateWithNSDictionary:(NSDictionary *)dict{
++ (NSData *) jsonDateWithJSONObject:(id)jsonObject{
     NSError *error = nil;
-    NSData *requestBody = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
+    NSData *requestBody = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
     if(error == nil)
     {
-//        NSLog(@"Serialization body: %@",dict);
+        //        NSLog(@"Serialization body: %@",dict);
     }else {
         NSLog(@"Serialization Eror: %@",error);
     }
@@ -27,15 +27,15 @@
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves|NSJSONReadingAllowFragments error:&error];
     if(error == nil)
     {
-//        NSLog(@"Serialization body: %@",jsonObject);
+        //        NSLog(@"Serialization body: %@",jsonObject);
     }else {
         NSLog(@"Serialization Eror: %@",error);
     }
     return jsonObject;
 }
 
-+ (NSString *) jsonStringWithNSDictionary:(NSDictionary *) dict{
-    NSData *jsonData = [NSString jsonDateWithNSDictionary:dict];
++ (NSString *) jsonStringWithJSONObject:(id) jsonObject{
+    NSData *jsonData = [NSString jsonDateWithJSONObject:jsonObject];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     return jsonString;
 }
@@ -45,5 +45,4 @@
     id jsonObject = [NSString jsonObjectWithData:jsonData];
     return jsonObject;
 }
-
 @end

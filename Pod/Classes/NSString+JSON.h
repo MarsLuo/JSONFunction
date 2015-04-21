@@ -10,11 +10,11 @@
 
 @interface NSString (JSON)
 
-+ (NSData *) jsonDateWithNSDictionary:(NSDictionary *)dict;
++ (NSData *) jsonDateWithJSONObject:(id)jsonObject;
 
 + (id) jsonObjectWithData:(NSData *) data;
 
-+ (NSString *) jsonStringWithNSDictionary:(NSDictionary *) dict;
++ (NSString *) jsonStringWithJSONObject:(id) jsonObject;
 
 + (id) jsonObjectWithNSString:(NSString *) jsonString;
 
