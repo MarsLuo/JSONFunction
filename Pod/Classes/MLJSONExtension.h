@@ -19,7 +19,7 @@
  *
  *  @return 返回字段或者数组
  */
-- (id) zl_jsonObject;
+- (id) ml_jsonObject;
 
 @end
 
@@ -30,7 +30,7 @@
  *
  *  @return 返回字段或者数组
  */
-- (id) zl_jsonObject;
+- (id) ml_jsonObject;
 
 @end
 
@@ -41,13 +41,13 @@
  *
  *  @return JSON格式的Data
  */
-- (NSData *) zl_jsonData;
+- (NSData *) ml_jsonData;
 
 /**
  *  @brief 将字典对象转化为JSON格式的NSString
  *
  *  @return JSON格式的NSString
  */
-- (NSString *) zl_jsonString;
+- (NSString *) ml_jsonString;
 
 @end

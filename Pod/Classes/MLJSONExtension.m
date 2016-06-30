@@ -15,7 +15,7 @@
  *
  *  @return 返回字段或者数组
  */
-- (id) zl_jsonObject{
+- (id) ml_jsonObject{
     NSError *error = nil;
     id jsonObject = nil;
     @try {
@@ -46,10 +46,10 @@
  *
  *  @return 返回字段或者数组
  */
-- (id) zl_jsonObject{
+- (id) ml_jsonObject{
     
     NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
-    id jsonObject = [jsonData zl_jsonObject];
+    id jsonObject = [jsonData ml_jsonObject];
     return jsonObject;
 }
 
@@ -62,7 +62,7 @@
  *
  *  @return JSON格式的Data
  */
-- (NSData *) zl_jsonData{
+- (NSData *) ml_jsonData{
     NSError *error = nil;
     NSData *jsonData = nil;
     @try {
@@ -88,8 +88,8 @@
  *
  *  @return JSON格式的NSString
  */
-- (NSString *) zl_jsonString{
-    NSData *jsonData = [self zl_jsonData];
+- (NSString *) ml_jsonString{
+    NSData *jsonData = [self ml_jsonData];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     return jsonString;
 }
