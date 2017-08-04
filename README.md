@@ -22,7 +22,7 @@ pod "JSONFunction", :git => 'https://github.com/MarsLuo/JSONFunction.git'
 
 ## Author
 
-骆杨, yluo@thinkjoy.cn
+骆杨, lyyx_0@163.com
 
 ## License
 
